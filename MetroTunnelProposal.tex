@@ -1,289 +1,37 @@
-%% 
-%% Copyright 2007, 2008, 2009 Elsevier Ltd
-%% 
-%% This file is part of the 'Elsarticle Bundle'.
-%% ---------------------------------------------
-%% 
-%% It may be distributed under the conditions of the LaTeX Project Public
-%% License, either version 1.2 of this license or (at your option) any
-%% later version.  The latest version of this license is in
-%%    http://www.latex-project.org/lppl.txt
-%% and version 1.2 or later is part of all distributions of LaTeX
-%% version 1999/12/01 or later.
-%% 
-%% The list of all files belonging to the 'Elsarticle Bundle' is
-%% given in the file `manifest.txt'.
-%% 
-%% Template article for Elsevier's document class `elsarticle'
-%% with harvard style bibliographic references
-%% SP 2008/03/01
+\documentclass[final,3p,times,authoryear]{elsarticle}
 
-%\documentclass[preprint,12pt,authoryear]{elsarticle}  %default in the template
-%\documentclass[preprint,10pt,authoryear]{elsarticle}
-
-%% Use the option review to obtain double line spacing
-%% \documentclass[authoryear,preprint,review,12pt]{elsarticle}
-
-%% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
-%% for a journal layout:
-%% \documentclass[final,1p,times,authoryear]{elsarticle}
-%% \documentclass[final,1p,times,twocolumn,authoryear]{elsarticle}
- \documentclass[final,3p,times,authoryear]{elsarticle}
-%% \documentclass[final,3p,times,twocolumn,authoryear]{elsarticle}
-%% \documentclass[final,5p,times,authoryear]{elsarticle}
-%% \documentclass[final,5p,times,twocolumn,authoryear]{elsarticle}
-
-%% For including figures, graphicx.sty has been loaded in
-%% elsarticle.cls. If you prefer to use the old commands
-%% please give \usepackage{epsfig}
-
-%% The amssymb package provides various useful mathematical symbols
-\usepackage{amssymb}
-%% The amsthm package provides extended theorem environments
- \usepackage{amsthm}
- \usepackage{amsmath}
- \usepackage{color}
- \usepackage{amsmath}
-\usepackage{siunitx}
-
-
-\usepackage{framed} % Framing content
-\usepackage{multicol} % Multiple columns environment
-\usepackage{nomencl} % Nomenclature package
-\makenomenclature
-%\setlength{\nomitemsep}{-\parskip} % Baseline skip between items
-\setlength{\nomitemsep}{0.01cm}
-\renewcommand*\nompreamble{\begin{multicols}{2}}
-\renewcommand*\nompostamble{\end{multicols}}
-\newcommand{\degreeC}{\ensuremath{^\circ}C }
-
-\usepackage[nonumberlist]{glossaries}
-\makeglossaries 
-
-
-%% The lineno packages adds line numbers. Start line numbering with
-%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
-%% for the whole article with \linenumbers.
-%% \usepackage{lineno}
-
-\journal{Urban Climate}
-
-
-\begin{document}
-
-
-
-
-\begin{frontmatter}
-
-%% Title, authors and addresses
-
-%% use the tnoteref command within \title for footnotes;
-%% use the tnotetext command for theassociated footnote;
-%% use the fnref command within \author or \address for footnotes;
-%% use the fntext command for theassociated footnote;
-%% use the corref command within \author for corresponding author footnotes;
-%% use the cortext command for theassociated footnote;
-%% use the ead command for the email address,
-%% and the form \ead[url] for the home page:
-%% \title{Title\tnoteref{label1}}
-%% \tnotetext[label1]{}
-%% \author{Name\corref{cor1}\fnref{label2}}
-%% \ead{email address}
-%% \ead[url]{home page}
-%% \fntext[label2]{}
-%% \cortext[cor1]{}
-%% \address{Address\fnref{label3}}
-%% \fntext[label3]{}
-
-\title{Metro Tunnel - Applied Learning Opportunities research proposal}
-
-
-%% use optional labels to link authors explicitly to addresses:
-
-
-\author[melb]{Kerry~A.~Nice\corref{cor1}}
-\ead{kerry.nice@unimelb.edu.au}
-
-\cortext[cor1]{Principal corresponding author}
-\address[melb]{Transport, Health, and Urban Design Hub, Faculty of Architecture, Building, and Planning, University of Melbourne, Victoria 3010, Australia}
-
-
-
-
-
-
-\begin{abstract}
-
-
-
-\end{abstract}
-
-
-\end{frontmatter}
-
-
-
-
-
-
+ \makeatletter
+ \def\ps@pprintTitle{%
+  \let\@oddhead\@empty
+  \let\@evenhead\@empty
+  \def\@oddfoot{}%
+  \let\@evenfoot\@oddfoot}
+ \makeatother
+ \begin{document}     
+ \title{Metro Tunnel - Applied Learning Opportunities research proposal}
+ \author{Kerry~A.~Nice
+ \\Transport, Health, and Urban Design Hub, Faculty of Architecture, Building, and Planning, University of Melbourne, Victoria 3010, Australia}
+ \date{\today}
+ \maketitle
 
 \section{Background}\label{sec:introduction}
+Urban heat is a challenge to policy makers, urban planners, and residents of urban areas. Heat waves have been shown to cause significant increases in mortality and morbidity as daily temperatures cross thresholds \citep{Nicholls2008}. Concurrently, projections of future climate change suggest an increase in the frequency, duration, and intensities of heat waves \citep{Alexander2009}. In addition, the design of urban areas exacerbates the impacts of heat waves and urban heat through urban heat island (UHI) effects, in which increased storage of daytime heat in urban areas is amplified by impervious surfaces, an increased amount of anthropogenic heat, and the reduction of shade providing and moisture providing vegetation canopies \citep{Coutts2012}.
 
+Other impacts of urban design on human health can be seen in journey mode choices. A growing body of evidence confirms an association between the quality of the built environment and levels of physical activity, with amenities such as shading have been shown to increase the walkability of an area \citep{Millington2009,Gallin2001,LSA2003}. Increased active journeys lead to lower body mass index (BMI) \citep{Davison2008,Lee2008b}, reduced risk of cardiovascular disease, stroke and hypertension \citep{WHO2010,Warburton2006} and decreased health care costs \citep{Stephenson2000}. Addressing these problems requires both a means to understand the factors causing the problems as well as a method to test possible redesign strategies for the best possible health outcomes.
 
+\section{Project overview}
+Human thermal comfort provides a link between both of these pressing health issues, the impacts of heat waves and poor thermal comfort discouraging active transport modes.  This project fits within two of the applied learning initiatives, inner urban cooling and making Melbourne multi-modal. We propose to develop a design decision support system (DDSS) integrating thermal comfort and multi-modal transportation based on agent based modelling (ABM). ABM allows interactions between intelligent autonomous agents to be modelled within a defined space such as a rail station catchment. Agents navigate the street and public transport network interacting with the urban environment (including heat mapped urban canyons and urban features such as vegetation canopies). By changing the make-up of the modelled area, the parameters of the simulation, and varying interactions of the agents, different urban design scenarios can be simulated and tested.
 
-Urban heat is a challenge to policy makers, urban planners, and residents of urban areas. Heat waves have been shown to cause significant increases in mortality and morbidity as daily temperatures cross thresholds \citep{Nicholls2008}. Concurrently, projections of future climate change suggest an increase in the frequency, duration, and intensities of heat waves \citep{Alexander2009}. In addition, the design of urban areas exacerbates the impacts of heat waves through urban heat island (UHI) effects, in which increased storage of heat in urban areas is facilitated by dry impervious surfaces, a increased amount of anthropogenic heat, and the reduction of shade providing vegetation canopies \citep{Coutts2012}.
+To develop the modelling areas, a wide availability of urban datasets including GIS datasets and street view imagery and new processing techniques can be used to extract the urban morphology to build modelling domains. These combined with urban climate thermal comfort modelling output allows large urban areas to be heat mapped and incorporated into modelling scenarios. Further modifications to these urban areas allows thermal comfort impacts of urban design changes (i.e. increases to the vegetation canopy) to be quantified and added to the ABM DDSS as a interactive layer. Validation of this thermal comfort modelling can be facilitated through observations from University Square, as this area has been monitored during during the construction phase.
 
-Other impacts on human health can be seen in journey mode choices. Increased active journeys lead to lower body mass index (BMI) \citep{Davison2008,Lee2008b}, reduced risk of cardiovascular disease, stroke and hypertension \citep{WHO2010,Warburton2006} and decreased health care costs \citep{Stephenson2000}. A growing body of evidence confirms an association between the quality of the built environment and levels of physical activity, with amenities such as shading have been shown to increase the walkability of an area \citep{Millington2009,Gallin2001,LSA2003}. Human thermal comfort provides a link between both of these pressing health issues, the impacts of heat waves and poor thermal comfort discouraging active transport modes. 
+ABM modelling can then be used to quantify the impacts of these urban redesigns on heat health and thermal stress (such as during heat waves) and the impact on multi-modal transport choices (including active transport modes) in the catchment. Issues such as bikes on trains and its impact on the enabling cycling as a primary transport mode on longer journeys can be modelled. 
 
-
-
-
-
-
-
-Inner urban cooling
-	urban canopy mapping and urban heat mapping
-	utilize monitoring of University Square for modelling
-	heat scenarios and redesign impacts
-Multi-modal
-	Model catchment (ABM)
-	Bikes on trains
-	Look at construction phases
-
-
-
-
-%Coutts, A. M., Tapper, N. J., Beringer, J., Loughnan, M. and Demuzere, M. (2012) ‘Watering our Cities: The capacity for Water Sensitive Urban Design to support urban cooling and improve human thermal comfort in the Australian context’, Progress in Physical Geography, 37(1), pp. 2–28. doi: 10.1177/0309133312461032.
-%
-%Nicholls, N., Skinner, C., Loughnan, M. and Tapper, N. (2008) ‘A simple heat alert system for Melbourne, Australia.’, International Journal of Biometeorology, 52(5), pp. 375–84. doi: 10.1007/s00484-007-0132-5.
-
-
-Human thermal comfort (HTC) is also an essential element when selecting active transport for school journeys and yet
-there is a paucity of research assessing the role this may play in mode choice. It is often recognised in walkability
-assessments that amenities such as shading can increase the walkability of an area (Millington et al. 2009; Gallin 2001;
-LSA Associates 2003), but these factors are generally difficult to quantify and are rarely considered in isolation from
-other streetscape aesthetic properties. Poor HTC can negatively impact active transport, making it difficult and less
-desirable (Buys and Miller 2011; Eves et al. 2008), reduce the level of physical activity (Merrill et al. 2005), and
-contribute to increases in the perception of exertion (Sheffield-Moore et al. 1997).
-Ultraviolet (UV) exposure is a critical issue to consider in designing for active journeys by utilising sun protection (via
-shading) and limiting UV exposure. Shading from a tree canopy can provide a sun protection factor (SPF) of 2, with
-denser canopies providing between 5 and 15 (Grant et al. 2002). This is particularly important in Australia which has
-one of the highest incidences of skin cancer in the world (Fransen et al. 2012).
-Assessing the impact of shade provided by trees has developed significantly in the past decade with substantial
-contributions to this area of science by both CI Hes (Hes et al. 2007) and CI Livesley (Berry et al. 2013). The digital
-modelling of street trees and their shade has also seen significant efficiency improvements – it is now feasible to
-digitally simulate large-scale urban scenarios with geometrically accurate trees (White \& Langenheim, 2014). The
-incorporation of such modelling into an active school journey tool is highly desirable.
-
-
-%Andersen, J. and Landex, A. (2009), GIS-based Approaches to Catchment Area Analyses of Mass Transit. In: ESRI International User Conference San Diego.
-%Badland, H., White, M., Macaulay, G., Eagleson, S., Mavoa, S., Pettit, C. and Giles-Corti, B. (2013), Using simple agent-based modeling to inform and
-%enhance neighborhood walkability. International Journal of Health Geographics, 12(58):pp. 1–10.
-%Batty, M. (2001), Agent Based Pedestrian Modeling (editorial). Environment and Planning B: Planning and Design, 28:pp. 321–326.
-%Berry, R., Livesley, S.J. and Aye, L. (2013), Tree canopy shade impacts on solar irradiance received by building walls and their surface temperature. Building
-%and Environment, 69 (November):pp. 91–100.
-%Buys, L. and Miller, E. (2011), Conceptualising convenience: Transportation practices and perceptions of inner-urban high-density residents in Brisbane,
-%Australia. Transport Policy, 18(1):pp. 289–297.
-%Carlin, J.B., Stevenson, M.R., Roberts, I., Bennett, C.M., Gelman, A. and Nolan, T. (1997), Walking to school and traffic exposure in Australian children.
-%Australian and New Zealand Journal of Public Health, 21(3):pp. 286–292.
-%Centers for Disease Control and Prevention (2005), Barriers to children walking to or from school–United States, 2004. Technical Report 38, Centers for Disease Control and Prevention.
-%URL: http://www.censusdata.abs.gov.au/census_services/getproduct/census/2011/quickstat/4GADE
-%Davison, K.K., Werder, J.L. and Lawson, C.T. (2008), Children’s active commuting to school: current knowledge and future directions. Preventing Chronic
-%Disease, 5(3).
-%Denning, P.J. (2013), The Profession of IT: Design thinking. Communications of the ACM, 56(12):pp. 29–31.
-%Eves, F.F., Masters, R.S.W., Mcmanus, A., Leung, M., Wong, P. and White, M.J. (2008), Contextual barriers to lifestyle physical activity interventions in
-%HONG KONG. Medicine and Science in Sports and Exercise, 40(5):pp. 965–971.
-%Ewing, R. and Handy, S. (2009), Measuring the Unmeasurable: Urban Design Qualities Related to Walkability. Journal of Urban Design, 14(1):pp. 65–84.
-%Frank, L.D., Sallis, J.F., Saelens, B.E., Leary, L., Cain, K., Conway, T.L. and Hess, P.M. (2010), The development of a walkability index: application to the
-%Neighborhood Quality of Life Study. British Journal of Sports Medicine, 44(13):pp. 924–933.
-%Fransen, M., Karahalios, a., Sharma, N., English, D.R., Giles, G.G. and Sinclair, R.D. (2012), Non-melanoma skin cancer in Australia. Medical Journal of
-%Australia, 197(10):pp. 565–568.
-%Gallin, N. (2001), Quantifying pedestrian friendliness – guidelines for assessing pedestrian level of service. Road & Transport Research, 10(1):pp. 47–55.
-%Garrard, J. (2009), Active transport: Children and young people, An Overview of Recent Evidence. Technical report, VicHealth.
-%URL: http://www.chpcp.org/resources/active_transport_children_and_young_people_final.pdf
-%Giles-corti, B., Vernez-moudon, A., Reis, R., Turrell, G., Dannenberg, A.L., Badland, H., Foster, S., Lowe, M., Sallis, J.F., Stevenson, M. and Owen, N.
-%(2016), Urban design, transport, and health 1 City planning and population health: a global challenge. The Lancet, 6736(16):pp. 1–13.
-%Giles-Corti, B., Wood, G., Pikora, T., Learnihan, V., Bulsara, M., Van Niel, K., Timperio, A., McCormack, G. and Villanueva, K. (2011), School site and the
-%potential to walk to school: The impact of street connectivity and traffic exposure in school neighborhoods. Health and Place, 17(2):pp. 545–550.
-%Grant, R.H., Heisler, G.M. & Gao, W. (2002), Estimation of pedestrian level UV exposure under trees. Photochemistry and Photobiology, 75(4):pp. 369–376.
-%Hanibuchi, T., Kawachi, I., Nakaya, T., Hirai, H. and Kondo, K. (2011), Neighborhood built environment and physical activity of Japanese older adults: results
-%from the Aichi Gerontological Evaluation Study (AGES). BMC Public Health, 11(1):p. 657.
-%Helbing, D. and Balietti, S. (2012), Social Self-Organization: Agent-Based Simulations and Experiments to Study Emergent Social Behavior. Springer.
-%Hes, D., Dawkins, A., Jensen, C. and Aye, L. (2011), A Modelling Method to Assess the Effect of Tree Shading for Building Performance Simulation. In:
-%12th Conference of International Building Performance Simulation Association, January, pp. 161–168.
-%Hess, D.B. (2012), Walking to the bus: Perceived versus actual walking distance to bus stops for older adults. Transportation, 39(2):pp. 247–266.
-%Highsmith, J. (2002), What Is Agile Software Development? The Journal of Defense Software Engineering, 15(10):pp. 4–9.
-%Hilier, B. (1996), Space is the machine. Cambridge University Press.
-%Kelly, C.E., Tight, M.R., Page, M.W. and Hodgson, F.C. (2007), Techniques for Assessing the Walkability of the Pedestrian Environment. In: 8th Annual
-%International Conference on Walking and Liveable Communities, Walk 21, November 2016, p. 13.
-%Kerr, J., Rosenberg, D., Sallis, J.F., Saelens, B.E., Frank, L.D. and Conway, T.L. (2006), Active commuting to school: Associations with environment and
-%parental concerns. Medicine and Science in Sports and Exercise, 38(4):pp. 787–794.
-%Lee, M., Orenstein, M. and Richardson, M. (2008), Systematic review of active commuting to school and childrens physical activity and weight. Journal of
-%Physical Activity & Health, 5(403):pp. 930–949.
-%Lo, R.H. (2009), Walkability: what is it? Journal of Urbanism: International Research on Placemaking and Urban Sustainability, 2(2):pp. 145–166.
-%Logan, D., Corben, B., Oxley, J., Liu, S. and Corben, K. (2013), A model for star rating school walking routes-Walk This Way.
-%LSA Associates (2003), Kansas City Walkablity Plan. Technical report, Kansas City.
-%Marshall, J.D., Brauer, M. and Frank, L.D. (2009), Healthy neighborhoods: Walkability and air pollution. Environmental Health Perspectives, 117(11):pp.
-%1752–1759.
-%Merrill, R., Shields, E., White, G. and Druce, D. (2005), Climate conditions and physical activity in the United States. American Journal of Health Behavior,
-%29(4):pp. 371–381.
-%Millington, C., Ward Thompson, C., Rowe, D., Aspinall, P., Fitzsimons, C., Nelson, N. and Mutrie, N. (2009), Development of the Scottish Walkability
-%Assessment Tool (SWAT). Health and Place, 15(2):pp. 474–481.
-%Owen, N., Cerin, E., Leslie, E., DuToit, L., Coffee, N., Frank, L.D., Bauman, A.E., Hugo, G., Saelens, B.E. and Sallis, J.F. (2007), Neighborhood Walkability
-%and the Walking Behavior of Australian Adults. American Journal of Preventive Medicine, 33(5):pp. 387–395.
-%Owen, N., Humpel, N., Leslie, E., Bauman, A. and Sallis, J.F. (2004), Understanding environmental influences on walking: Review and research agenda.
-%American Journal of Preventive Medicine, 27(1):pp. 67–76.
-%Park, S., Choi, K. and Lee, J.S. (2015), To Walk or Not to Walk: Testing the Effect of Path Walkability on Transit Users’ Access Mode Choices to the Station.
-%International Journal of Sustainable Transportation, 9(8):pp. 529–541.
-%Pettit, C.J., Klosterman, R.E., Delaney, P., Whitehead, A.L., Kujala, H., Bromage, A. and Nino-Ruiz, M. (2015), The Online What if? Planning Support
-%System: A Land Suitability Application in Western Australia. Applied Spatial Analysis and Policy, 8(2):pp. 93–112.
-%Pushkarev, B. and Zupan, J. (1975), Urban Space for Pedestrians: A Report of the Regional Plan Association. The MIT Press.
-%Rodríguez D, Khattak A, Evenson K. 2006. Can new urbanism encourage physical activity? Journal of American Planning Association 72(1):43–54.
-%Sander, H.A., Ghosh, D., van Riper, D. and Manson, S.M. (2010), How do you measure distance in spatial models? an example using open-space valuation.
-%Environment and Planning B: PLanning and Design, 37(5):pp. 874–894.
-%Sheffield-Moore, M., Short, K.R., Kerr, C.G., Parcell, A.C., Bolster, D., Costill, D.L. and Sheffield-Moore, M. (1997), Thermoregulatory responses to cycling
-%with and without a helmet. Medicine and Science in Sports and Exercise, 29(6):pp. 755–761.
-%Stephenson, J., Bauman, A., Armstrong, T., Smith, B. and Bellew, B. (2000), The cost of illness attributable to physical inactivity in Australia: A preliminary
-%study. Technical report.
-%Timperio, A., Ball, K., Salmon, J., Roberts, R., Giles-Corti, B., Simmons, D., Baur, L.A. and Crawford, D. (2006), Personal, family, social, and environmental
-%correlates of active commuting to school. American Journal of Preventive Medicine, 30(1):pp. 45–51.
-%Torrens, P. (2003), Cellular Automata and Multi-agent Systems as Planning Support Tools. In: Planning Support Systems in Practice, chapter 12, Springer.
-%Transport Research Board Institute of Medicine of the National Academies (2005), Does the Built Environment Influence Physical Activity: Examining the
-%Evidence. Technical report.
-%Tudor-Locke, C., Ainsworth, B.E. and Popkin, B.M. (2001), Active commuting to school: an overlooked source of childrens’ physical activity? Sports Med,
-%31(5):pp. 309–313.
-%Van der Ploeg, H.P., Merom, D., Corpus, G. and Bauman, A. (2008), Trends in Australian children travelling to school 1971-2003: burning oil or
-%carbohydrates? Preventive Medicine, 46:pp. 60–62.
-%Warburton, D.E.R., Nicol, C.W. and Bredin, S.S.D. (2006), Health benefits of physical activity: the evidence. CMAJ, 174(6):pp. 801–9.
-%White, M. and Kimm, G. (2017), PedCatch – inclusive pedestrian accessibility modelling using animated service area simulation with crowd-sourced network
-%data. In: Healthy Future Cities (ed. S. Hun), Tsinghua University Press, Beijing, China.
-%White, M. and Langenheim, N. (2014), Impact assessment of street trees in the City of Melbourne using temporal high polygon 3D canopy modelling. In: 7th
-%International Urban Design Conference Designing Productive Cities. Adelaide, Australia.
-%World Health Organization (2010), Global recommendations on physical activity for health. Technical report.
-%World Health Organization (2015), Global status report on road safety 2015. Technical report, World Health Organization.
-%Yarlagadda, A.K. and Srinivasan, S. (2008), Modeling children’s school travel mode and parental escort decisions. Transportation, 35(2):pp. 201–218.
-%Zaccari, V. and Dirkis, H. (2003), Walking to school in inner Sydney. Health Promotion Journal of Australia, 14(2):pp. 137–140.
-
-
+An important consideration that is often overlooked during long term construction projects is the impacts the project can have on the urban areas during the construction. The DDSS AGM modelling platform can incorporate stages of the construction project and examine ways to minimize the impacts to both thermal comfort and active transport mode choices during the construction phases and after completion of the project. 
 
 
 \section*{References}\label{sec:ref}
-%% If you have bibdatabase file and want bibtex to generate the
-%% bibitems, please use
-%%
   \bibliographystyle{elsarticle-harv} 
   \bibliography{library}
 
-%% else use the following coding to input the bibitems directly in the
-%% TeX file.
-
-
-
-
 
 \end{document}
-
-\endinput
-%%
-%% End of file `elsarticle-template-harv.tex'.
